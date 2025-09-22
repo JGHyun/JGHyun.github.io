@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeon GyuHyun | Profile</title>
+  <!-- Google Fonts: Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header & Navigation (index.html과 동일) -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Jeon GyuHyun</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html" class="active">Profile</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+  </header>
+
+  <!-- Profile Section -->
+  <section class="profile">
+    <div class="profile-container">
+      <!-- 왼쪽: 사진 -->
+      <div class="profile-left">
+        <img src="picture/picture11.jpg" alt="Profile Picture">
+        
+      </div>
+      
+      <!-- 오른쪽: 학력 & 수상 -->
+      <div class="profile-right">
+        <br>
+        <h2>전규현 석사</h2>
+        <hr class="divider">
+
+        <h2>학력 사항</h2>
+        <ul>
+<ul>
+  <li style="padding-left: 2ch;"><b>2023.03 ~ 2025.02</b> 가천대학교 정보보호학(공학석사)</li>
+  <li style="padding-left: 2ch;"><b>2017.03 ~ 2023.02</b> 가천대학교 컴퓨터공학(공학사)</li>
+</ul>
+        </ul>
+        <hr class="divider">
+        
+        <h2>수상 내역</h2>
+        <ul>
+          <li style="padding-left: 2ch;">2023 ICT플랫폼학회 추계학술대회 우수논문상</li>
+          <li style="padding-left: 2ch;">2023 한국정보보호학회 충청지부 학술대회 한국전자통신연구원 원장상</li>
+          <li style="padding-left: 2ch;">2023 ICT플랫폼학회 하계학술대회 우수논문상</li>
+          <li style="padding-left: 2ch;">2022 한국정보보호학회 동계학술대회 한국정보호학회장상</li>
+          
+        </ul>
+        
+      </div>
+      
+    </div>
+    <br>
+  </section>
+<!-- Project Images Section -->
+<section class="project-images">
+  <div class="image-container">
+    <img src="picture/picture12.png" alt="Project 12">
+    <img src="picture/picture13.png" alt="Project 13">
+    <img src="picture/picture14.png" alt="Project 14">
+    <img src="picture/picture15.png" alt="Project 15">
+  </div>
+</section>
+
+<br>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Jeon GyuHyun. All rights reserved.</p>
+  </footer>
+
+  <!-- JS: Hamburger Menu -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
