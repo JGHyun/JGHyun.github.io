@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeon GyuHyun | Portfolio</title>
+  <!-- Google Fonts: Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Jeon GyuHyun</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>GyuHyun Jeon 전규현</h1>
+    <p>A passionate <strong>Researcher</strong> exploring <strong>Cybersecurity</strong>
+    </p>
+  </section>
+
+<!-- Slider Section -->
+<section class="slider">
+    <div class="slides">
+      <img src="picture/picture1.jpg" alt="Slide 1">
+      <img src="picture/picture2.png" alt="Slide 2">
+      <img src="picture/picture3.jpg" alt="Slide 3">
+      <img src="picture/picture4.png" alt="Slide 4">
+      <img src="picture/picture5.jpg" alt="Slide 5">
+      <img src="picture/picture6.jpg" alt="Slide 6">
+      <img src="picture/picture7.jpg" alt="Slide 7">
+      <img src="picture/picture8.jpg" alt="Slide 8">
+      <img src="picture/picture9.jpg" alt="Slide 9">
+      <img src="picture/picture10.jpg" alt="Slide 10">
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  
+    <!-- 도트 버튼 -->
+    <div class="dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
+      <span class="dot" data-index="5"></span>
+      <span class="dot" data-index="6"></span>
+      <span class="dot" data-index="7"></span>
+      <span class="dot" data-index="8"></span>
+      <span class="dot" data-index="9"></span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p><b>안녕하십니까. 전규현입니다.</b></p>
+     <br>
+    <p>E-mail : pengchan88@gachon.ac.kr / taylor88@naver.com<p>
+    <br>
+  
+  </section>
+
+  <!-- Research Areas -->
+  <section class="research">
+    <h2>Research Interests</h2>
+    <ul>
+      <li style="padding-left: 1ch;">Industrial Control System</li>
+      <li style="padding-left: 1ch;">CPS(Cyber Physical System)</li>
+      <li style="padding-left: 1ch;">Threat Modeling</li>
+      <li style="padding-left: 1ch;">Security Threat Scenario</li>
+      <li style="padding-left: 1ch;">Internet of Things</li>
+      <li style="padding-left: 1ch;">Network Security</li>
+      <li style="padding-left: 1ch;">Wearable Device Security</li>
+    </ul>
+    <br>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Jeon GyuHyun. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript: Mobile Menu Toggle -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const images = document.querySelectorAll('.slides img');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+    const dots = document.querySelectorAll('.dot');
+    
+    let counter = 0;
+    
+    function updateSlide() {
+      const size = images[0].clientWidth;
+      slides.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    
+      // 도트 active 상태 갱신
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[counter].classList.add('active');
+    }
+    
+    // 좌우 버튼
+    next.addEventListener('click', () => {
+      counter++;
+      if(counter >= images.length) counter = 0;
+      updateSlide();
+    });
+    
+    prev.addEventListener('click', () => {
+      counter--;
+      if(counter < 0) counter = images.length -1;
+      updateSlide();
+    });
+    
+    // 도트 클릭
+    dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        counter = parseInt(e.target.getAttribute('data-index'));
+        updateSlide();
+      });
+    });
+    
+    // 자동 슬라이드
+    setInterval(() => {
+      counter++;
+      if(counter >= images.length) counter = 0;
+      updateSlide();
+    }, 4000);
+
+  document.querySelector('.logo').addEventListener('click', function() {
+    window.location.href = 'https://jghyun.github.io/';
+  });
+
+    </script>
+
+</body>
+</html>
+
+
+    
