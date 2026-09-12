@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>전규현 | Profile</title>
+<meta name="description" content="전규현의 학력, 수상 내역 및 활동 기록.">
+<meta name="theme-color" content="#0b1d2e">
+<link rel="stylesheet" href="style.css?v=20260913">
+</head>
+<body>
+
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<header class="bar">
+  <div class="wrap bar__inner">
+    <a class="brand" href="index.html">Jeon GyuHyun <span>전규현</span></a>
+
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기">
+      <span></span>
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="주요 메뉴">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html" aria-current="page">Profile</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="scrim" data-scrim aria-hidden="true"></div>
+
+<main id="main">
+
+  <div class="wrap pcard">
+    <img class="pcard__photo" src="picture/picture11.jpg" alt="전규현 프로필 사진">
+
+    <div>
+      <h1 class="pcard__name">전규현 <span class="pcard__title">선임 연구원</span></h1>
+      <p class="pcard__role">R&amp;D사업본부 · ㈜스틸리언</p>
+      <dl class="pcard__info">
+        <div><dt>소속</dt><dd>㈜스틸리언 R&amp;D사업본부</dd></div>
+        <div><dt>직위</dt><dd>선임 연구원</dd></div>
+        <div><dt>학력</dt><dd>가천대학교 정보보호학 공학석사<br>가천대학교 컴퓨터공학 공학사</dd></div>
+        <div><dt>연구 분야</dt><dd>네트워크 · IoT 보안, ICS · CPS 보안, Cyber Range 등</dd></div>
+        <div><dt>E-mail</dt><dd><span class="email">ghjeon@stealien.com</span></dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>학력</h2>
+      </div>
+
+      <ul class="timeline">
+        <li>
+          <time datetime="2023-03/2025-02">2023.03 &ndash; 2025.02</time>
+          <div>
+            <h3>가천대학교 정보보호학 <span class="degree">공학석사</span></h3>
+          </div>
+        </li>
+        <li>
+          <time datetime="2017-03/2023-02">2017.03 &ndash; 2023.02</time>
+          <div>
+            <h3>가천대학교 컴퓨터공학 <span class="degree">공학사</span></h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>수상</h2>
+        <p>4건</p>
+      </div>
+
+      <ul class="awards">
+        <li>
+          <b class="num">2023.12</b>
+          <span>ICT플랫폼학회 추계학술대회 우수논문상</span>
+        </li>
+        <li>
+          <b class="num">2023.09</b>
+          <span>한국정보보호학회 충청지부 학술대회 한국전자통신연구원 원장상</span>
+        </li>
+        <li>
+          <b class="num">2023.07</b>
+          <span>ICT플랫폼학회 하계학술대회 우수논문상</span>
+        </li>
+        <li>
+          <b class="num">2022.11</b>
+          <span>한국정보보호학회 동계학술대회 한국정보보호학회장상</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>수상 기록</h2>
+        <p>이미지를 누르면 크게 볼 수 있습니다</p>
+      </div>
+
+      <div class="gallery" data-gallery>
+        <button type="button" aria-label="기록 사진 1 크게 보기">
+          <img src="picture/picture12.png" alt="2023 ICT플랫폼학회 추계학술대회 우수논문상" loading="lazy">
+        </button>
+        <button type="button" aria-label="기록 사진 2 크게 보기">
+          <img src="picture/picture13.png" alt="2023 한국정보보호학회 충청지부 학술대회 한국전자통신연구원 원장상" loading="lazy">
+        </button>
+        <button type="button" aria-label="기록 사진 3 크게 보기">
+          <img src="picture/picture14.png" alt="2023 ICT플랫폼학회 하계학술대회 우수논문상" loading="lazy">
+        </button>
+        <button type="button" aria-label="기록 사진 4 크게 보기">
+          <img src="picture/picture15.png" alt="2022 한국정보보호학회 동계학술대회 정보보호학회장상" loading="lazy">
+        </button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<dialog class="lightbox" data-lightbox aria-label="사진 크게 보기">
+  <button class="lightbox__close" type="button" aria-label="닫기">&times;</button>
+  <img src="" alt="">
+</dialog>
+
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <p>© 2026 Jeon GyuHyun. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="app.js?v=20260913" defer></script>
+</body>
+</html>
