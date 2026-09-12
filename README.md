@@ -1,2 +1,2 @@
 # JGHyun.github.io
-My portfolio for employment
+My portfolio
