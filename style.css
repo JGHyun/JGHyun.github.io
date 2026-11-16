@@ -351,12 +351,12 @@ body.nav-open .scrim { opacity: 1; visibility: visible; }
 /* ledger strip */
 .ledger {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.75rem;
   margin: clamp(1.75rem, 1.25rem + 2vw, 2.5rem) 0 0;
 }
 .ledger div {
-  padding: 1rem 1.1rem 0.9rem;
+  padding: 1rem 0.6rem 0.9rem;
   border: 1px solid var(--panel-rule);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.04);
@@ -377,9 +377,25 @@ body.nav-open .scrim { opacity: 1; visibility: visible; }
   font-weight: 600;
   color: var(--panel-text);
 }
+.ledger__sub {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: var(--panel-mute);
+  word-break: keep-all;
+}
 
+/* 태블릿: 3칸 + 2칸 */
+@media (max-width: 48rem) {
+  .ledger { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .ledger div { grid-column: span 2; }
+  .ledger div:nth-child(n + 4) { grid-column: span 3; }
+}
+/* 모바일: 2칸 + 3칸 (논문·연구과제를 넓게) */
 @media (max-width: 34rem) {
-  .ledger { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ledger div { grid-column: span 2; }
+  .ledger div:nth-child(-n + 2) { grid-column: span 3; }
 }
 
 /* =========================================================
